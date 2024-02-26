@@ -8,7 +8,7 @@ function solution(n) {
             odd_sum+=i;
         }
         // n과 i가 짝수 일 경우
-        // 짝수인 i만 더하게 한다.
+        // 짝수인 i의 양의 정수의 제곱의 합을 더한다.
         else if(n%2===0 && i%2===0){
             even_sum+=Math.pow(i, 2);
         }
