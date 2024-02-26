@@ -8,6 +8,6 @@ function solution(num_list) {
         sum_square += i;
     }
     // 모든 원소들의 합의 제곱
-
+    // Math.pow(sum_square, 2)
     return multiplication> Math.pow(sum_square, 2)? 0 : 1;
 }
