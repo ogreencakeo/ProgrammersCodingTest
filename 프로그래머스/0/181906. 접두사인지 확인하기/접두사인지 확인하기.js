@@ -1,5 +1,5 @@
 function solution(my_string, is_prefix) {
-    // slice를 사용하여 해당 접미사를 자름
+    // slice를 사용하여 해당 접두사를 자름
     var answer = my_string.slice(0, is_prefix.length);
     console.log(answer);
     
