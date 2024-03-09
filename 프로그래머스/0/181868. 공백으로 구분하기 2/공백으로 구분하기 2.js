@@ -1,5 +1,5 @@
 function solution(my_string) {
-    let arr = my_string.replace(/\s+/g + ' ').trim();
-    let result = arr.match(/\S+/g);
+    let result = my_string.split(' ').filter(v => v);
     return result;
+    
 }
