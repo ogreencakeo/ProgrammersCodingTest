@@ -1,11 +1,6 @@
 function solution(my_string) {
-    let str_arr = my_string.split('');
-    let arr = [];
-    for(let i of str_arr){
-        let num = parseInt(i);
-        if(!isNaN(num)){
-            arr.push(num);
-        }
-    }
-    return arr.sort((a,b) => a===b? 0 : a>b ? 1 : -1);
+    return my_string.split('')
+        .filter(v => !isNaN(parseInt(v)))
+        .map(v => parseInt(v))
+        .sort((a, b) => a===b ? 0 : a>b? 1 : -1);
 }
