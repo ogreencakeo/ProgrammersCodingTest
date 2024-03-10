@@ -6,11 +6,6 @@ function solution(x) {
         sum+= Number(i);
     }
     
-    console.log('sum :', sum);
-    
-    if(x%sum === 0){
-        return true;
-    }else{
-        return false;
-    }
+    return x%sum===0? true : false;
+
 }
