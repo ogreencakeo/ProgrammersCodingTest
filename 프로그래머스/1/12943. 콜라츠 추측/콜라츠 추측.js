@@ -8,7 +8,7 @@ function solution(num) {
             num = num * 3 + 1;
             sum++;
         }
-        if(sum >= 300){
+        if(sum >= 500){
             return -1;
         }
     }
