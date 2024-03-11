@@ -1,17 +1,8 @@
 function solution(num) {
     let sum = 0;
-    while(num !== 1){
-        if(num%2===0){
-            num/=2;
-            sum++;
-        }else{
-            num = num * 3 + 1;
-            sum++;
-        }
-        if(sum >= 500){
-            return -1;
-        }
+    while(num !== 1 && sum!==500){
+        num%2===0 ? num/=2 : num = num*3+1;
+        sum++;
     }
-    
-    return sum;
+    return num == 1?  sum : -1;
 }
