@@ -1,6 +1,5 @@
 function solution(before, after) {
-    const sortedBefore = before.split('').sort().join('');
-    const sortedAfter = after.split('').sort().join('');
-
-    return sortedBefore === sortedAfter ? 1 : 0;
+    const beforeStr = before.split('').sort().join('');
+    const afterStr = after.split('').sort().join('');
+    return beforeStr === afterStr ? 1 : 0
 }
