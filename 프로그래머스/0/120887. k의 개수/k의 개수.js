@@ -1,13 +1,9 @@
 function solution(i, j, k) {
-    let sum = 0;
-    for (let num = i; num <= j; num++) {
-        let currentNum = num;
-        while (currentNum > 0) {
-            if (currentNum % 10 === k) {
-                sum++;
-            }
-            currentNum = Math.floor(currentNum / 10);
+    let result = '';
+    for(let e=i; e<=j; e++){
+        if(e.toString().includes(k)){
+            result += e;
         }
     }
-    return sum;
+    return result.split(k).length - 1;
 }
