@@ -4,9 +4,6 @@ function solution(price, money, count) {
        result += i * price ;
     }
     
-    if(money > result ){
-        return 0;
-    }else{
-        return result - money;
-    }
+    return money > result ? 0 : result - money;
+
 }
