@@ -1,13 +1,13 @@
 function solution(s) {
-   
     let arr = s.split('');
-    if(arr.length !== 4 && arr.length !== 6){
+    
+    if(arr.length !== 4 && arr.length!==6){
         return false;
     }
-         
-    for(let i=0; i<arr.length; i++){
-        if(isNaN(parseInt(arr[i]))){
-           return false; 
+    
+    for(let i of arr){
+        if(isNaN(parseInt(i))){
+            return false;
         }
     }
     return true;
