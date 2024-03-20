@@ -1,11 +1,11 @@
 function solution(ineq, eq, n, m) {
-    if(ineq === ">" && eq === '='){
-        return n >= m ? 1 : 0;
-    }else if(ineq === "<" && eq === "="){
-        return n <= m ? 1 : 0;
-    }else if(ineq === ">" && eq === "!"){
-        return n > m ? 1 : 0;
-    }else if(ineq === "<" && eq === "!"){
-        return n < m ? 1 : 0;
-    }
+    const operations = {
+        ">=" : (n, m) => n >= m,
+        "<=" : (n, m) => n <= m,
+        ">!" : (n, m) => n > m,
+        "<!" : (n, m) => n < m,
+    };
+    
+    const option = operations[ineq + eq];
+    return Number(option(n, m)) ? 1 : 0;
 }
