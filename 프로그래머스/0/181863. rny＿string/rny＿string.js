@@ -1,4 +1,4 @@
 function solution(rny_string) {
-    var answer = rny_string.replace(/m/g,'rn');
-    return answer;
+    let arr = rny_string.split('').map((v) => v.includes('m') ? "rn" : v).join('');
+    return arr;
 }
