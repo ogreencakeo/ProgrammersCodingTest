@@ -1,9 +1,4 @@
 function solution(my_string, n) {
-    var answer = '';
-    for(let i of my_string){
-        for(let j=0; j<n; j++){
-            answer+= i;
-        }
-    }
-    return answer;
+    let result = my_string.split('').map((v) => v.repeat(n)).join('');
+    return result;
 }
