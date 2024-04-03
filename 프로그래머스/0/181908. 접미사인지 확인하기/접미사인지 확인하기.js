@@ -1,5 +1,11 @@
 function solution(my_string, is_suffix) {
-    var answer = my_string.slice(-is_suffix.length);
-    console.log(answer);
-    return answer === is_suffix ? 1 : 0;
+    
+    let arr = [];
+    for(let i=0; i<my_string.length; i++){
+        arr.push(my_string.slice(i));
+    }
+    let result = arr.indexOf(is_suffix);
+    
+    return result === -1 ? 0 : 1;
+
 }
