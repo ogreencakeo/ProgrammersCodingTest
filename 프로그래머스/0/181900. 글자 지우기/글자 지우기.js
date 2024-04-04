@@ -1,9 +1,4 @@
 function solution(my_string, indices) {
-    let str = '';
-    for(let i=0; i<my_string.length; i++){
-        if(!indices.includes(i)){
-            str+= my_string[i];
-        }
-    }
-    return str;
+    let result = my_string.split('').filter((v, i) => !indices.includes(i)).join('');
+    return result;
 }
