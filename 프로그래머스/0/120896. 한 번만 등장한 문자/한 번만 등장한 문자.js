@@ -1,16 +1,18 @@
 function solution(s) {
-    let cnt = {};
+    let result = {};
+    const arr = [];
     for(let i of s){
-        cnt[i] = (cnt[i] || 0) + 1;
-    }
-    
-    let result = '';
-    
-    for(let i in cnt){
-        if(cnt[i] === 1){
-            result += i;
+        if(result[i] === undefined){
+            result[i] = 1;
+        }else{
+            result[i]++;
         }
     }
-    result = result.split('').sort().join('');
-    return result;
+    for (let key in result) {
+        if (result[key] === 1) {
+            arr.push(key);
+        }
+    }
+    arr.sort();
+    return arr.join('');
 }
